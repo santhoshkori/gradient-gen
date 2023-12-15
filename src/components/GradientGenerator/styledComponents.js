@@ -6,10 +6,12 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   background-image: linear-gradient(
-    to props=>props.directioncolor,
-    props.color1,
-    props.color2
+    to ${props => props.directioncolorgen},
+    ${props => props.color12},
+    ${props => props.color21}
   );
+  height: 100vh;
+  color: white;
 `
 export const Container1 = styled.form`
   display: flex;
@@ -23,7 +25,8 @@ export const Button = styled.button`
   padding: 5px;
   border-style: none;
   border-radius: 4px;
-  background-color: #ededed;
+  opacity:${props => (props.istrue ? '1' : '0.5')}
+  background-color:"#ededed"
 `
 export const Genbutton = styled.button`
   padding: 5px;
@@ -34,12 +37,27 @@ export const Genbutton = styled.button`
   color: white;
 `
 export const Heading = styled.h1`
-  color: black;
+  color: white;
 `
+
+export const Li = styled.li``
 export const Para = styled.p`
-  color: black;
+  color: white;
 `
 export const Inputcolor = styled.input`
   margin-right: 40px;
 `
-export const Buttoncontainer = styled.div``
+export const Buttoncontainer = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+`
+
+export const Buttoncontainer2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+`
+export const Colorscont = styled.div``
